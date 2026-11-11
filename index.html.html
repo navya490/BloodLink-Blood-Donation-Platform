@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BloodLink — Every Drop Connects a Life</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with forms & container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching Design System & Brand Guidance -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed": "#0f1b33",
+            "secondary-fixed-dim": "#bac6e6",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#f1dee2",
+            "outline": "#906f6e",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#e2e2e2",
+            "surface-container-high": "#e8e8e8",
+            "on-primary-fixed": "#410007",
+            "on-tertiary-fixed-variant": "#504347",
+            "on-tertiary-container": "#f1dee1",
+            "inverse-on-surface": "#f0f1f1",
+            "on-surface-variant": "#5c403f",
+            "primary": "#9e001f",
+            "tertiary-container": "#6f6164",
+            "on-error-container": "#93000a",
+            "on-primary-fixed-variant": "#92001c",
+            "secondary-fixed": "#d8e2ff",
+            "primary-fixed": "#ffdad8",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e2e2e2",
+            "tertiary": "#57494d",
+            "on-secondary-container": "#57627e",
+            "inverse-surface": "#2f3131",
+            "surface-container": "#eeeeee",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#d4dfff",
+            "surface-container-low": "#f3f3f3",
+            "primary-container": "#c8102e",
+            "background": "#f9f9f9",
+            "on-tertiary-fixed": "#23191c",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed-variant": "#3b4760",
+            "surface-bright": "#f9f9f9",
+            "outline-variant": "#e5bdbb",
+            "primary-fixed-dim": "#ffb3b1",
+            "inverse-primary": "#ffb3b1",
+            "surface-tint": "#bf0229",
+            "on-primary-container": "#ffdad8",
+            "surface": "#f9f9f9",
+            "on-surface": "#1a1c1c",
+            "tertiary-fixed-dim": "#d5c2c6",
+            "on-background": "#1a1c1c",
+            "surface-dim": "#dadada",
+            "secondary": "#535e79"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "title-lg": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "label-md": ["Manrope"],
+            "label-sm": ["Manrope"],
+            "body-md": ["Manrope"],
+            "body-lg": ["Manrope"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined[data-weight="fill"],
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Pulse soft ring animation for live emergency logistics */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.45); }
+      70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(200, 16, 46, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(200, 16, 46, 0); }
+    }
+    .live-dot {
+      animation: pulse-ring 2.2s infinite;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-primary-container">
+<!-- TOP EMERGENCY HELPLINE BANNER -->
+<div class="bg-on-secondary-fixed text-surface-container-lowest px-4 py-2 border-b border-on-secondary-fixed-variant/40">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-container live-dot"></span>
+<span class="font-bold text-primary-fixed">EMERGENCY ASSISTANCE:</span>
+<span class="text-secondary-fixed-dim">Need Blood In An Emergency? Call Toll-Free:</span>
+<a class="text-surface-container-lowest font-bold tracking-wider hover:text-primary-fixed transition-colors underline decoration-primary-container" href="tel:18002566354">1-800-BLOOD-LINK</a>
+<span class="hidden sm:inline text-secondary-fixed-dim text-label-sm">(1-800-256-6354) • 24/7 Clinical Coordination</span>
+</div>
+<div class="flex items-center gap-3 text-label-sm text-secondary-fixed-dim">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">verified</span> National Clinical Protocol Compliant
+        </span>
+</div>
+</div>
+</div>
+<!-- 1. STICKY TOP NAVIGATION BAR (Shared Component JSON Conformance) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface-container-lowest/95 backdrop-blur-md border-b border-surface-container-high shadow-sm">
+<div class="max-w-7xl mx-auto px-gutter flex justify-between items-center h-20 w-full">
+<!-- Brand Logo + Name Anchor -->
+<a class="flex items-center gap-3 group focus:outline-none" href="#home">
+<img alt="BloodLink Logo Mark" class="h-10 w-10 object-contain rounded-lg transition-transform duration-200 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJEzGQIUeviNbTCYy4ekdGXTFcOYxP6w3MXtDy0qGdt-a-EvyTSEn7Akbt9Z0AhecLAUG85Wx7yV49NCOVIPjOxLlfCfF5EV89FjOK6CCsCnoHWeq8zcNoQ0nqzC9t7fdvWnghvVyIYS_dxsjibzeFDW7E9Xoq3uFwMAjEytg9pVBxGqdoTT4j8uE6cNGeQi9xsM5yMqXdIly8LCx0r-nQFAU2VVEuQ2ktRrVvpYia"/>
+<div class="flex flex-col">
+<div class="flex items-center">
+<span class="text-headline-sm font-headline-sm font-extrabold tracking-tight text-on-secondary-fixed">BLOODLINK</span>
+<span class="h-2 w-2 rounded-full bg-primary-container ml-0.5 inline-block"></span>
+</div>
+<span class="text-[10px] font-label-sm text-secondary tracking-widest uppercase">National Donor Network</span>
+</div>
+</a>
+<!-- Desktop Navigation Links (Center) -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-primary-container font-bold border-b-2 border-primary-container pb-1 transition-colors" href="#home">Home</a>
+<a class="text-secondary hover:text-on-surface transition-colors pb-1" href="#quick-search">Find Donors</a>
+<a class="text-secondary hover:text-on-surface transition-colors pb-1" href="#blood-banks">Blood Banks</a>
+<a class="text-secondary hover:text-on-surface transition-colors pb-1" href="#how-it-works">How It Works</a>
+<a class="text-secondary hover:text-on-surface transition-colors pb-1" href="#compatibility">Compatibility</a>
+<a class="text-secondary hover:text-on-surface transition-colors pb-1" href="#education">About Us</a>
+</nav>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifications" class="p-2 text-secondary hover:text-primary-container hover:bg-surface-container-low rounded-lg transition-colors relative" type="button">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-primary-container rounded-full"></span>
+</button>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-label-md font-label-md text-on-secondary-fixed hover:bg-surface-container-low rounded-lg transition-colors duration-150" href="#login">
+          Login
+        </a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 text-label-md font-label-md font-bold text-on-primary bg-primary-container hover:brightness-105 active:scale-[0.98] rounded-2xl shadow-sm transition-all duration-150" href="#become-donor">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>Become a Donor</span>
+</a>
+</div>
+</div>
+</header>
+<main id="home">
+<!-- 2. HERO SECTION (Split Layout with Visual Assets) -->
+<section class="relative pt-12 pb-24 overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface-bright to-background">
+<!-- Ambient Background Glows -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 right-0 w-[32rem] h-[32rem] bg-secondary-container/25 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Copy & Actions -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- National Initiative Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-primary font-label-md text-label-md mb-6 border border-outline-variant/40 shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-primary-container" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+<span class="font-bold tracking-wide">UNITED BY HUMANITY • NATIONAL HEALTHCARE INITIATIVE</span>
+</div>
+<!-- Headline -->
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl tracking-tight text-on-secondary-fixed mb-5 leading-tight">
+              Your One Donation Can Be <br class="hidden sm:inline"/>
+<span class="text-primary-container relative inline-block">
+                Someone's Tomorrow
+                <svg class="absolute left-0 -bottom-2 w-full h-3 text-outline-variant/60" fill="none" preserveaspectratio="none" viewbox="0 0 200 12">
+<path d="M2 9C58 3 142 3 198 9" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</span>.
+            </h1>
+<!-- Subtext -->
+<p class="text-body-lg font-body-lg text-secondary max-w-xl mb-8 leading-relaxed">
+              Connecting voluntary blood donors directly with accredited blood banks, critical triage units, and emergency patients. Because when every second counts, every connection matters.
+            </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl bg-primary-container text-on-primary text-headline-sm font-headline-sm font-bold shadow-md hover:brightness-105 active:scale-[0.98] transition-all" href="#quick-search">
+<span>Find Blood Now</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl border-2 border-on-secondary-fixed text-on-secondary-fixed text-headline-sm font-headline-sm font-bold hover:bg-surface-container-low active:scale-[0.98] transition-all" href="#become-donor">
+<span class="material-symbols-outlined text-[20px] text-primary-container" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>Become a Donor</span>
+</a>
+</div>
+<!-- Trust Indicator Row -->
+<div class="flex items-center gap-3 pt-6 border-t border-surface-container-high w-full text-secondary text-body-md font-body-md">
+<span class="material-symbols-outlined text-primary-container text-[24px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>Connecting <strong>24,000+</strong> voluntary donors, <strong>180+</strong> hospitals and certified clinical blood banks nationwide.</span>
+</div>
+</div>
+<!-- Right Column: 3D Visual Concept Art Showcase -->
+<div class="lg:col-span-5 relative flex justify-center">
+<!-- Soft Glowing Container & Frame -->
+<div class="relative w-full max-w-md lg:max-w-none">
+<!-- Delicate Ambient Radial Glow -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-fixed/50 via-outline-variant/20 to-secondary-container/40 rounded-3xl blur-2xl -z-10 transform scale-95"></div>
+<!-- Main Card Surface -->
+<div class="relative bg-surface-container-lowest rounded-3xl p-3 border border-surface-container-high shadow-lg overflow-hidden group">
+<!-- Hero 3D Concept Image -->
+<div class="relative rounded-2xl overflow-hidden aspect-square bg-surface-bright">
+<img alt="BloodLink 3D Concept Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf6UxD-QpLZ4X7TKC0rDb_K4T6Eq1LUAaL5xFSUr6LsPKjDqWeqMGI0C-V6wKm0FhiDgdOlRcm8IgqDuJI-PvXE1nAeegKkpGfmUnkZE7WpRZAZEFk1g5EvOeo0gehm7oWxQ9dskw9o4CVPR8RI8YByTyqHESZy0WE3s5hRO9NQeRtfb5jOJR_JRkAfus097Tp7EeLa3SoHbGPp4wbL-ryF-S9RRYJK80l5Xi1gqlE"/>
+<!-- Soft Tonal Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/50 via-transparent to-transparent pointer-events-none"></div>
+<!-- Floating Glassmorphic Pill: O- Universal Live -->
+<div class="absolute top-4 left-4 backdrop-blur-md bg-surface-container-lowest/90 border border-surface-container-lowest/80 px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container live-dot"></span>
+<span class="text-label-sm font-label-sm font-bold text-on-secondary-fixed">O- Universal Active</span>
+</div>
+<!-- Floating Glassmorphic Pill: Verified Network -->
+<div class="absolute top-4 right-4 backdrop-blur-md bg-on-secondary-fixed/85 text-surface-container-lowest border border-on-secondary-fixed/30 px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5 text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">verified</span>
+<span>100% Screened</span>
+</div>
+<!-- Bottom Floating Live Status Pill -->
+<div class="absolute bottom-4 left-4 right-4 backdrop-blur-md bg-surface-container-lowest/95 border border-surface-container-high p-3 rounded-2xl shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center text-primary-container font-extrabold text-title-lg">
+                        AB+
+                      </div>
+<div>
+<div class="text-label-md font-label-md font-bold text-on-secondary-fixed">Universal Recipient</div>
+<div class="text-[11px] text-secondary">Matching 14 local hospitals</div>
+</div>
+</div>
+<span class="text-label-sm font-label-sm px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-bold">
+                      Real-Time
+                    </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. QUICK BLOOD SEARCH CARD (Floating Overlap) -->
+<section class="max-w-6xl mx-auto px-gutter relative z-20 -mt-16 sm:-mt-12" id="quick-search">
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high shadow-xl p-6 sm:p-8 backdrop-blur-sm">
+<!-- Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 mb-6 border-b border-surface-container-high gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[24px]">search</span>
+<h2 class="text-headline-md font-headline-md font-bold text-on-secondary-fixed">Find the Blood You Need</h2>
+</div>
+<p class="text-body-md font-body-md text-secondary mt-1">Real-time search across authorized blood banks &amp; verified volunteer networks.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm text-secondary bg-surface-container-low px-3 py-1.5 rounded-full border border-surface-container">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Live Stock Synced 3 mins ago
+          </span>
+</div>
+<!-- Blood Group Pill Selector -->
+<div class="mb-6">
+<label class="block text-label-md font-label-md text-on-secondary-fixed mb-2.5">Select Required Blood Group:</label>
+<div class="grid grid-cols-4 sm:grid-cols-8 gap-2.5" id="blood-group-selector">
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-primary-container bg-primary-container text-on-primary font-headline-sm font-bold shadow-sm transition-all" data-bg="A+" type="button">A+</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="A-" type="button">A-</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="B+" type="button">B+</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="B-" type="button">B-</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="AB+" type="button">AB+</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="AB-" type="button">AB-</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="O+" type="button">O+</button>
+<button class="group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all" data-bg="O-" type="button">O-</button>
+</div>
+</div>
+<!-- Form Dropdown Grid -->
+<form class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-end" id="search-filter-form" onsubmit="event.preventDefault(); triggerDemoSearch();">
+<div class="sm:col-span-4">
+<label class="block text-label-md font-label-md text-on-secondary-fixed mb-1.5" for="state-select">State / Administrative Region</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-surface-container-high rounded-xl px-3.5 py-3 text-body-md text-on-secondary-fixed focus:border-primary-container focus:ring-2 focus:ring-primary-fixed appearance-none" id="state-select">
+<option value="all">All States &amp; Territories</option>
+<option value="ca">California / West Coast</option>
+<option value="ny">New York / Northeast</option>
+<option value="tx">Texas / Southern Metro</option>
+<option value="il">Illinois / Great Lakes</option>
+<option value="fl">Florida / Southeast</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-secondary pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="sm:col-span-5">
+<label class="block text-label-md font-label-md text-on-secondary-fixed mb-1.5" for="city-input">City / District / Pincode</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-secondary text-[20px]">location_on</span>
+<input class="w-full bg-surface-container-lowest border border-surface-container-high rounded-xl pl-10 pr-3.5 py-3 text-body-md text-on-secondary-fixed focus:border-primary-container focus:ring-2 focus:ring-primary-fixed" id="city-input" placeholder="e.g. Metro Central, Brooklyn, Houston..." type="text" value="Metro Central"/>
+</div>
+</div>
+<div class="sm:col-span-3">
+<button class="w-full py-3 px-4 rounded-xl bg-primary-container hover:brightness-105 active:scale-[0.98] text-on-primary font-headline-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Search Availability</span>
+</button>
+</div>
+</form>
+<!-- Privacy & Medical Trust Indicator -->
+<div class="mt-4 pt-3 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Fictional demonstration prototype. No medical data is stored or transmitted without verified consent.</span>
+</span>
+<a class="text-primary-container hover:underline hidden sm:inline" href="#how-it-works">How matching works →</a>
+</div>
+</div>
+</section>
+<!-- 4. URGENT BLOOD REQUESTS SECTION -->
+<section class="py-20 bg-background">
+<div class="max-w-7xl mx-auto px-gutter">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-error text-label-sm font-label-sm font-bold mb-3">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container live-dot"></span>
+              EMERGENCY DISCOVERY • SOMEONE NEEDS YOUR HELP TODAY
+            </div>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed">
+              Urgent Blood Requirements
+            </h2>
+<p class="text-body-lg font-body-lg text-secondary mt-2 max-w-2xl">
+              Explore sample emergency blood requirements and discover where support is needed. (Demonstration data for competition prototype).
+            </p>
+</div>
+<a class="mt-4 md:mt-0 inline-flex items-center gap-1 text-primary-container font-headline-sm font-bold hover:underline" href="#quick-search">
+<span>View All Active Broadcasts</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 3-Column Urgent Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Critical O- Universal -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all relative flex flex-col justify-between" style="box-shadow: 0 0 0 2px #FCE8EC;">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-on-secondary-fixed text-surface-container-lowest font-headline-sm font-bold flex items-center justify-center text-headline-sm">
+                    O-
+                  </div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary">Universal Donor</span>
+<h3 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Patient Ref: #BL-8492</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error text-label-sm font-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Critical (Within 4 hrs)
+                </span>
+</div>
+<div class="space-y-2.5 my-5 text-body-md font-body-md text-secondary border-y border-surface-container-low py-4">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_hospital</span> Hospital:
+                  </span>
+<strong class="text-on-secondary-fixed">St. Jude Memorial Hospital</strong>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span> Location:
+                  </span>
+<span class="text-on-secondary-fixed">Metro Central (3.2 km away)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">water_drop</span> Required:
+                  </span>
+<span class="text-primary-container font-bold">3 Units Whole Blood</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 py-2.5 px-4 rounded-xl bg-primary-container hover:brightness-105 active:scale-[0.98] text-on-primary font-headline-sm text-label-md font-bold text-center transition-all" onclick="alert('Demo: Donor confirmation module dispatched to St. Jude Memorial.')" type="button">
+                Respond to Request
+              </button>
+<button class="p-2.5 rounded-xl border border-surface-container-high text-on-secondary-fixed hover:bg-surface-container-low transition-colors" onclick="alert('Patient Reference #BL-8492\nHospital: St. Jude Memorial\nTriage Desk: +1 (800) 555-0199')" title="View Details" type="button">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Urgent B+ -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-primary font-headline-sm font-bold flex items-center justify-center text-headline-sm">
+                    B+
+                  </div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary">Pediatric Surgery</span>
+<h3 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Patient Ref: #BL-7721</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 text-label-sm font-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  Urgent (Within 12 hrs)
+                </span>
+</div>
+<div class="space-y-2.5 my-5 text-body-md font-body-md text-secondary border-y border-surface-container-low py-4">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_hospital</span> Hospital:
+                  </span>
+<strong class="text-on-secondary-fixed">City Pediatric Institute</strong>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span> Location:
+                  </span>
+<span class="text-on-secondary-fixed">West Valley (7.8 km away)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">water_drop</span> Required:
+                  </span>
+<span class="text-primary-container font-bold">2 Units Platelets</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 py-2.5 px-4 rounded-xl bg-primary-container hover:brightness-105 active:scale-[0.98] text-on-primary font-headline-sm text-label-md font-bold text-center transition-all" onclick="alert('Demo: Donor confirmation module dispatched to City Pediatric.')" type="button">
+                Respond to Request
+              </button>
+<button class="p-2.5 rounded-xl border border-surface-container-high text-on-secondary-fixed hover:bg-surface-container-low transition-colors" onclick="alert('Patient Reference #BL-7721\nHospital: City Pediatric Institute\nTriage Desk: +1 (800) 555-0244')" title="View Details" type="button">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Urgent AB- Rare -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-on-secondary-fixed text-surface-container-lowest font-headline-sm font-bold flex items-center justify-center text-headline-sm">
+                    AB-
+                  </div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary">Rare Blood Group</span>
+<h3 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Patient Ref: #BL-9304</h3>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error text-label-sm font-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Urgent (Within 8 hrs)
+                </span>
+</div>
+<div class="space-y-2.5 my-5 text-body-md font-body-md text-secondary border-y border-surface-container-low py-4">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">local_hospital</span> Hospital:
+                  </span>
+<strong class="text-on-secondary-fixed">Metropolitan Trauma Center</strong>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">location_on</span> Location:
+                  </span>
+<span class="text-on-secondary-fixed">East Bay (11.4 km away)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">water_drop</span> Required:
+                  </span>
+<span class="text-primary-container font-bold">4 Units Packed RBCs</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 py-2.5 px-4 rounded-xl bg-primary-container hover:brightness-105 active:scale-[0.98] text-on-primary font-headline-sm text-label-md font-bold text-center transition-all" onclick="alert('Demo: Donor confirmation module dispatched to Metropolitan Trauma Center.')" type="button">
+                Respond to Request
+              </button>
+<button class="p-2.5 rounded-xl border border-surface-container-high text-on-secondary-fixed hover:bg-surface-container-low transition-colors" onclick="alert('Patient Reference #BL-9304\nHospital: Metropolitan Trauma Center\nTriage Desk: +1 (800) 555-0382')" title="View Details" type="button">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Demonstration Disclaimer Banner -->
+<div class="mt-8 p-4 rounded-xl bg-surface-container-low border border-surface-container-high text-center text-label-md font-label-md text-secondary">
+<span>⚠️ Fictional demonstration records for national design challenge. Never disregard actual emergency triage telephone lines in real-life crises.</span>
+</div>
+</div>
+</section>
+<!-- 5. BECOME A DONOR SECTION (Asymmetric Split with Documentary Photo) -->
+<section class="py-20 bg-surface-container-lowest border-y border-surface-container-high" id="become-donor">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Inspiring narrative & bullets -->
+<div class="lg:col-span-6">
+<span class="text-primary-container text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Be Someone's Reason to Smile</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed mb-5 leading-tight">
+              A 30-Minute Pause in Your Day Can Gift Someone a Lifetime.
+            </h2>
+<p class="text-body-lg font-body-lg text-secondary mb-8 leading-relaxed">
+              Your willingness to donate can make an immediate, life-saving difference. Register as a voluntary donor today and build a safer, resilient healthcare community.
+            </p>
+<!-- 3 Key Value Propositions with checkmark icons -->
+<div class="space-y-4 mb-8">
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div>
+<h4 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Free Clinical Health Screening</h4>
+<p class="text-body-md font-body-md text-secondary">Complimentary hemoglobin, blood pressure, and preliminary vitals evaluation prior to every donation.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div>
+<h4 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Smart Targeted Notifications</h4>
+<p class="text-body-md font-body-md text-secondary">Zero spam. You are only alerted when your specific blood group is urgently needed within your chosen radius.</p>
+</div>
+</div>
+<div class="flex items-start gap-3.5">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] font-bold">check</span>
+</div>
+<div>
+<h4 class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">Digital Donor Recognition</h4>
+<p class="text-body-md font-body-md text-secondary">Track verified pints donated, lives touched, and access your secure digital donor credential.</p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<button class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-primary-container text-on-primary font-headline-sm font-bold shadow-md hover:brightness-105 active:scale-[0.98] transition-all" onclick="alert('Donor registration form modal initiated. (Demonstration)')" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+<span>Register as a Donor</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-6 py-3.5 rounded-2xl bg-tertiary-fixed text-primary font-headline-sm font-bold hover:brightness-95 transition-all" href="#education">
+<span>Learn About Eligibility</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Documentary Photography https://lh3.googleusercontent.com/aida-public/AB6AXuDSuLJT3vgHUskB7176BdJ2OLmlZXr48_xEil7-cvrRHWHIk1GsBXT7Yacd7jpNrCmzwGQl-IVjGYd0ep1R7RXE79_JgzHXKVekk3B6aQdqtFhavocLbPpZdoBefTdU1p6Xg6kJMpP5GttPXFirS-tPLYgVEaWVF3GBOXuHN7f_HSJziw6nstPi5_XQfDsQk6-2slwMozpJAczvgyPI5uliPnTGOWPQ1iWO1q1lEFCm -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-3xl overflow-hidden border border-surface-container-high shadow-xl bg-surface-container">
+<img alt="Voluntary Donor smiling with healthcare nurse" class="w-full h-[480px] object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSuLJT3vgHUskB7176BdJ2OLmlZXr48_xEil7-cvrRHWHIk1GsBXT7Yacd7jpNrCmzwGQl-IVjGYd0ep1R7RXE79_JgzHXKVekk3B6aQdqtFhavocLbPpZdoBefTdU1p6Xg6kJMpP5GttPXFirS-tPLYgVEaWVF3GBOXuHN7f_HSJziw6nstPi5_XQfDsQk6-2slwMozpJAczvgyPI5uliPnTGOWPQ1iWO1q1lEFCm"/>
+<!-- Subtle vignette overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-secondary-fixed/60 via-transparent to-transparent"></div>
+<!-- Floating Hero Statistic Card -->
+<div class="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-surface-container-lowest/90 border border-surface-container-lowest p-4 rounded-2xl shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div>
+<div class="text-title-lg font-title-lg font-bold text-on-secondary-fixed">1 Donation = Up to 3 Lives Saved</div>
+<div class="text-label-md font-label-md text-secondary">Red cells, plasma, and platelets support three different patients</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. HOW BLOODLINK WORKS (3-Step Stepper) -->
+<section class="py-20 bg-background" id="how-it-works">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary-container text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Clinical Precision Process</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed">
+            Simple, Safe and Transparent
+          </h2>
+<p class="text-body-lg font-body-lg text-secondary mt-2">
+            How BloodLink connects generosity to clinical necessity in three hospital-grade steps.
+          </p>
+</div>
+<!-- 3-Step Process Grid with connector line -->
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Stepper decorative bar (Desktop) -->
+<div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-surface-container-high -z-0"></div>
+<!-- Step 1 -->
+<div class="relative z-10 bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary font-headline-sm font-bold flex items-center justify-center mb-6 shadow-sm">
+              01
+            </div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-2">Register &amp; Verify</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed">
+              Create your voluntary donor profile with verified blood type, preferred location radius, and emergency availability preferences.
+            </p>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center gap-2 text-label-md font-label-md text-primary-container font-semibold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Secure ID Verification</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-on-secondary-fixed text-surface-container-lowest font-headline-sm font-bold flex items-center justify-center mb-6 shadow-sm">
+              02
+            </div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-2">Connect Instantly</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed">
+              Discover real-time blood appeals and nearby authorized blood banks through smart automated geolocation &amp; antigen matching.
+            </p>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center gap-2 text-label-md font-label-md text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+<span>Intelligent Radius Match</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary font-headline-sm font-bold flex items-center justify-center mb-6 shadow-sm">
+              03
+            </div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-2">Make a Difference</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed">
+              Complete your donation comfortably at certified hospital blood centers under licensed hematological supervision.
+            </p>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center gap-2 text-label-md font-label-md text-primary-container font-semibold">
+<span class="material-symbols-outlined text-[18px]">award_star</span>
+<span>Certified Impact Track</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. BLOOD BANK NETWORK DIRECTORY PREVIEW -->
+<section class="py-20 bg-surface-container-low/60 border-t border-surface-container-high" id="blood-banks">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-primary-container text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Accredited Healthcare Facilities</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed">
+              Trusted Care, Closer to You
+            </h2>
+<p class="text-body-lg font-body-lg text-secondary mt-1 max-w-xl">
+              Certified regional blood banking partners adhering strictly to national clinical safety and cold-chain protocols.
+            </p>
+</div>
+<button class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-on-secondary-fixed text-on-secondary-fixed hover:bg-surface-container-lowest font-headline-sm font-bold transition-all" onclick="alert('Navigating to full accredited blood bank registry (320+ facilities).')" type="button">
+<span>View All Blood Banks Directory</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- 3 Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Node 1 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm font-bold">24/7 Emergency Center</span>
+<span class="text-label-sm font-label-sm text-secondary">2.4 km away</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-1">National Red Cross Center</h3>
+<p class="text-label-md font-label-md text-secondary mb-4">Downtown Clinical Division • 440 Health Boulevard</p>
+<div class="space-y-2 text-body-md font-body-md text-secondary border-t border-surface-container-low pt-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">call</span>
+<span>+1 (800) 555-0199</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>Accreditation: #BL-ACC-402</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">All Groups In Stock</span>
+<button class="text-label-md font-label-md font-bold text-primary-container hover:underline" onclick="alert('Red Cross Center details: Opening hours 24/7. Walk-in donations accepted.')" type="button">View Center →</button>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm font-bold">Open 07:00 – 22:00</span>
+<span class="text-label-sm font-label-sm text-secondary">5.1 km away</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-1">Apex Transfusion Medicine Bank</h3>
+<p class="text-label-md font-label-md text-secondary mb-4">University Teaching Wing • 12 Academic Way</p>
+<div class="space-y-2 text-body-md font-body-md text-secondary border-t border-surface-container-low pt-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">call</span>
+<span>+1 (800) 555-0244</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>Accreditation: #BL-ACC-119</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full">O- Reserves Needed</span>
+<button class="text-label-md font-label-md font-bold text-primary-container hover:underline" onclick="alert('Apex Transfusion details: Platelet apheresis machines active. Appointments recommended.')" type="button">View Center →</button>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-surface-container-high p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm font-bold">24/7 Operations</span>
+<span class="text-label-sm font-label-sm text-secondary">9.3 km away</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-1">Mercy General Blood Bank</h3>
+<p class="text-label-md font-label-md text-secondary mb-4">West Wing Level 1 • 88 Mercy Pavilion Dr.</p>
+<div class="space-y-2 text-body-md font-body-md text-secondary border-t border-surface-container-low pt-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">call</span>
+<span>+1 (800) 555-0382</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>Accreditation: #BL-ACC-955</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">All Groups In Stock</span>
+<button class="text-label-md font-label-md font-bold text-primary-container hover:underline" onclick="alert('Mercy General details: 24/7 dispatch fleet on standby.')" type="button">View Center →</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BLOOD GROUP EXPLORER (Interactive Matrix Component) -->
+<section class="py-20 bg-background" id="compatibility">
+<div class="max-w-6xl mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-primary-container text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Hematology Educational Tool</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed">
+            Blood Group Compatibility Matrix
+          </h2>
+<p class="text-body-lg font-body-lg text-secondary mt-2">
+            Explore the 8 major blood groups, donor compatibility, and red cell recipient guidelines.
+          </p>
+</div>
+<!-- Interactive Blood Group Tabs -->
+<div class="flex flex-wrap items-center justify-center gap-3 mb-10" id="matrix-tabs">
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-primary-container bg-primary-container text-on-primary shadow-md" onclick="selectMatrixGroup('O-')" type="button">O-</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('O+')" type="button">O+</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('A-')" type="button">A-</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('A+')" type="button">A+</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('B-')" type="button">B-</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('B+')" type="button">B+</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('AB-')" type="button">AB-</button>
+<button class="matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container" onclick="selectMatrixGroup('AB+')" type="button">AB+</button>
+</div>
+<!-- Dynamic Information Card -->
+<div class="bg-surface-container-lowest rounded-3xl border border-surface-container-high p-8 shadow-sm transition-all" id="matrix-display-card">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-4 text-center md:text-left border-b md:border-b-0 md:border-r border-surface-container-high pb-6 md:pb-0 md:pr-6">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-tertiary-fixed text-primary-container font-headline-xl font-bold mb-3 shadow-inner" id="mat-group-title">
+                O-
+              </div>
+<h3 class="text-headline-md font-headline-md font-bold text-on-secondary-fixed" id="mat-group-name">O Negative</h3>
+<p class="text-label-md font-label-md text-primary-container font-bold mt-1" id="mat-group-badge">Universal Red Cell Donor</p>
+<p class="text-body-md font-body-md text-secondary mt-3" id="mat-group-desc">
+                O Negative red blood cells can be transfused to patients of all blood types in critical emergency situations when time does not permit antibody matching.
+              </p>
+</div>
+<div class="md:col-span-8 space-y-6">
+<!-- Can Give Blood To -->
+<div>
+<span class="text-label-md font-label-md text-secondary block mb-2 font-bold uppercase tracking-wider">Can Give Red Blood Cells To:</span>
+<div class="flex flex-wrap gap-2" id="mat-can-give">
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">O+</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">O-</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">A+</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">A-</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">B+</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">B-</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">AB+</span>
+<span class="px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md">AB-</span>
+<span class="px-3 py-1.5 rounded-xl bg-secondary-container text-on-secondary-fixed font-bold text-label-sm">(All Recipients)</span>
+</div>
+</div>
+<!-- Can Receive Blood From -->
+<div>
+<span class="text-label-md font-label-md text-secondary block mb-2 font-bold uppercase tracking-wider">Can Receive Red Blood Cells From:</span>
+<div class="flex flex-wrap gap-2" id="mat-can-receive">
+<span class="px-3.5 py-1.5 rounded-xl bg-on-secondary-fixed text-surface-container-lowest font-bold text-label-md">O- Only</span>
+</div>
+</div>
+<!-- Clinical Factoid -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-container text-body-md font-body-md text-secondary flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-[20px] shrink-0 mt-0.5">info</span>
+<span id="mat-factoid">Because only about 7% of the global population has O- blood, these reserves are in continuous emergency demand across all trauma units.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Strict Medical Disclaimer -->
+<div class="mt-6 text-center text-label-sm font-label-sm text-secondary">
+<span>Disclaimer: Blood compatibility must always be confirmed by qualified medical professionals and laboratory cross-matching testing prior to transfusion.</span>
+</div>
+</div>
+</section>
+<!-- 9. DONATION AWARENESS & EDUCATION -->
+<section class="py-20 bg-surface-container-lowest border-y border-surface-container-high" id="education">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary-container text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Medically Verified Information</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-on-secondary-fixed">
+            Know More. Donate Better.
+          </h2>
+<p class="text-body-lg font-body-lg text-secondary mt-2">
+            Concise, medically responsible guidelines reviewed by clinical hematology advisors.
+          </p>
+</div>
+<!-- 3 Educational Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-bright rounded-2xl border border-surface-container-high p-8 flex flex-col justify-between hover:border-primary-container/40 transition-colors">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[26px]">checklist</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-3">Who Can Donate?</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed mb-4">
+                Basic donor eligibility criteria to safeguard both the voluntary donor and the recovering recipient:
+              </p>
+<ul class="space-y-2 text-body-md font-body-md text-secondary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Age between 18 and 65 years</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Weight at least 50 kg (110 lbs)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Hemoglobin level ≥ 12.5 g/dL</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Minimum 56 days between whole blood donations</li>
+</ul>
+</div>
+<a class="mt-6 pt-4 border-t border-surface-container-high text-label-md font-label-md font-bold text-primary-container hover:underline inline-flex items-center gap-1" href="#become-donor">
+<span>Detailed Eligibility Guide</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-bright rounded-2xl border border-surface-container-high p-8 flex flex-col justify-between hover:border-primary-container/40 transition-colors">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[26px]">timelapse</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-3">What to Expect?</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed mb-4">
+                The entire clinical visit takes about 45 minutes, while the blood collection itself is under 10 minutes:
+              </p>
+<ul class="space-y-2 text-body-md font-body-md text-secondary">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed"></span> 1. Confidential medical questionnaire</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed"></span> 2. Quick fingerstick hemoglobin check</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed"></span> 3. Comfortable, sterile draw (8-10 mins)</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-on-secondary-fixed"></span> 4. Refreshments, snacks &amp; 15-min rest</li>
+</ul>
+</div>
+<a class="mt-6 pt-4 border-t border-surface-container-high text-label-md font-label-md font-bold text-on-secondary-fixed hover:underline inline-flex items-center gap-1" href="#how-it-works">
+<span>Step-by-Step Overview</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-bright rounded-2xl border border-surface-container-high p-8 flex flex-col justify-between hover:border-primary-container/40 transition-colors">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-secondary-fixed mb-3">Myths vs. Facts</h3>
+<p class="text-body-md font-body-md text-secondary leading-relaxed mb-4">
+                Clearing common medical misconceptions regarding voluntary blood donation:
+              </p>
+<div class="space-y-3 text-body-md font-body-md text-secondary">
+<p><strong>Myth:</strong> "Donating makes you physically weak."<br/><span class="text-secondary text-label-md">Fact: Your body replenishes fluid volume in 24 hours and red blood cells in weeks.</span></p>
+<p><strong>Myth:</strong> "I might catch infections."<br/><span class="text-secondary text-label-md">Fact: Every needle and bag is 100% sterile and used only once.</span></p>
+</div>
+</div>
+<a class="mt-6 pt-4 border-t border-surface-container-high text-label-md font-label-md font-bold text-primary-container hover:underline inline-flex items-center gap-1" href="#education">
+<span>Read Clinical FAQ</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. IMPACT COUNTERS SECTION (Dark Midnight Navy Canvas) -->
+<section class="py-20 bg-on-secondary-fixed text-surface-container-lowest relative overflow-hidden">
+<!-- Subtle Radial Glow Background -->
+<div class="absolute -top-32 -right-32 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary-fixed/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter relative z-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-primary-fixed text-label-sm font-label-sm font-bold uppercase tracking-wider block mb-2">Demonstrative Network Reach</span>
+<h2 class="text-headline-lg font-headline-lg font-bold text-surface-container-lowest">
+            Small Acts. Extraordinary Impact.
+          </h2>
+<p class="text-body-lg font-body-lg text-secondary-fixed-dim mt-2">
+            Illustrative prototype metrics celebrating the life-saving potential of connected voluntary communities.
+          </p>
+</div>
+<!-- 4 Metric Cards Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+<div class="p-6 rounded-2xl bg-on-secondary-fixed-variant/40 border border-on-secondary-fixed-variant/40 backdrop-blur-sm">
+<div class="text-headline-xl-mobile md:text-headline-xl font-headline-xl font-extrabold text-primary-fixed mb-1">48,500+</div>
+<div class="text-title-lg font-title-lg font-bold text-surface-container-lowest">Registered Donors</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim mt-1">Verified voluntary community</p>
+</div>
+<div class="p-6 rounded-2xl bg-on-secondary-fixed-variant/40 border border-on-secondary-fixed-variant/40 backdrop-blur-sm">
+<div class="text-headline-xl-mobile md:text-headline-xl font-headline-xl font-extrabold text-surface-container-lowest mb-1">112,000+</div>
+<div class="text-title-lg font-title-lg font-bold text-surface-container-lowest">Units Connected</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim mt-1">Direct hospital dispatches</p>
+</div>
+<div class="p-6 rounded-2xl bg-on-secondary-fixed-variant/40 border border-on-secondary-fixed-variant/40 backdrop-blur-sm">
+<div class="text-headline-xl-mobile md:text-headline-xl font-headline-xl font-extrabold text-primary-fixed mb-1">320+</div>
+<div class="text-title-lg font-title-lg font-bold text-surface-container-lowest">Accredited Banks</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim mt-1">Certified medical partners</p>
+</div>
+<div class="p-6 rounded-2xl bg-on-secondary-fixed-variant/40 border border-on-secondary-fixed-variant/40 backdrop-blur-sm">
+<div class="text-headline-xl-mobile md:text-headline-xl font-headline-xl font-extrabold text-surface-container-lowest mb-1">94+</div>
+<div class="text-title-lg font-title-lg font-bold text-surface-container-lowest">Districts Covered</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim mt-1">Rapid ambulance corridor</p>
+</div>
+</div>
+<p class="text-center text-label-sm font-label-sm text-secondary-fixed-dim mt-10">
+          *Demonstrative metrics compiled for national healthcare innovation evaluation.
+        </p>
+</div>
+</section>
+<!-- 11. FINAL CALL TO ACTION (Crimson Container) -->
+<section class="py-20 bg-background">
+<div class="max-w-6xl mx-auto px-gutter">
+<div class="bg-primary-container rounded-3xl p-8 sm:p-14 text-center text-on-primary shadow-xl relative overflow-hidden">
+<!-- Subtle decorative graphic accent -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>
+<div class="max-w-2xl mx-auto relative z-10">
+<span class="inline-block px-3.5 py-1 rounded-full bg-white/20 text-on-primary text-label-sm font-label-sm font-bold uppercase tracking-wider mb-4">
+              Join the National Movement
+            </span>
+<h2 class="text-headline-lg font-headline-lg font-bold mb-4 leading-tight">
+              Be the Link Between Life and Hope.
+            </h2>
+<p class="text-body-lg font-body-lg text-primary-fixed mb-8 leading-relaxed">
+              Someone, somewhere, may need the one thing only you can give. It takes less than an hour of your time to create a lifetime of difference.
+            </p>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="px-8 py-4 rounded-2xl bg-surface-container-lowest text-primary-container text-headline-sm font-headline-sm font-bold shadow-lg hover:bg-surface-bright active:scale-[0.98] transition-all" href="#become-donor">
+                Become a Donor Today
+              </a>
+<button class="px-7 py-4 rounded-2xl border-2 border-white/80 text-surface-container-lowest text-headline-sm font-headline-sm font-bold hover:bg-white/10 active:scale-[0.98] transition-all flex items-center gap-2" onclick="navigator.clipboard?.writeText(window.location.href); alert('BloodLink portal link copied to clipboard. Share with your community!');" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span>Share BloodLink</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 12. COMPREHENSIVE HEALTHCARE FOOTER (Shared Component JSON Conformance) -->
+<footer class="docked full-width bottom bg-on-secondary-fixed text-secondary-fixed-dim border-t border-on-secondary-fixed-variant/30">
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto">
+<!-- Top Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-on-secondary-fixed-variant/30">
+<!-- Brand Info Column -->
+<div class="lg:col-span-4">
+<div class="flex items-center gap-3 mb-4">
+<img alt="BloodLink Logo" class="h-9 w-9 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJEzGQIUeviNbTCYy4ekdGXTFcOYxP6w3MXtDy0qGdt-a-EvyTSEn7Akbt9Z0AhecLAUG85Wx7yV49NCOVIPjOxLlfCfF5EV89FjOK6CCsCnoHWeq8zcNoQ0nqzC9t7fdvWnghvVyIYS_dxsjibzeFDW7E9Xoq3uFwMAjEytg9pVBxGqdoTT4j8uE6cNGeQi9xsM5yMqXdIly8LCx0r-nQFAU2VVEuQ2ktRrVvpYia"/>
+<span class="text-title-lg font-title-lg font-bold text-surface-container-lowest tracking-tight">BLOODLINK</span>
+</div>
+<p class="text-body-md font-body-md text-secondary-fixed-dim mb-4 leading-relaxed">
+            Every Drop Connects a Life. BloodLink is an open, national healthcare initiative connecting voluntary donors to certified blood banks and emergency patients with zero friction.
+          </p>
+<div class="text-label-sm font-label-sm text-primary-fixed">
+            Emergency Helpline: 1-800-BLOOD-LINK
+          </div>
+</div>
+<!-- Links Column 1: Quick Navigation -->
+<div class="lg:col-span-3">
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest font-bold mb-4">Quick Navigation</h4>
+<ul class="space-y-2.5 text-label-sm font-label-sm">
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#home">Home</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#quick-search">Find Donors</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#blood-banks">Blood Banks Directory</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#how-it-works">How It Works</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#compatibility">Compatibility Matrix</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Clinical Protocols & Legal -->
+<div class="lg:col-span-3">
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest font-bold mb-4">Clinical &amp; Ethics</h4>
+<ul class="space-y-2.5 text-label-sm font-label-sm">
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#education">Clinical Protocols</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#education">Donor Eligibility Criteria</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#blood-banks">Accredited Blood Banks</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#privacy">Privacy Shield</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#advisory">Medical Advisory Board</a></li>
+<li><a class="hover:text-primary-fixed hover:underline transition-all" href="#terms">Terms of Service</a></li>
+</ul>
+</div>
+<!-- Links Column 3: Demonstration Notice -->
+<div class="lg:col-span-2">
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest font-bold mb-4">Network Status</h4>
+<div class="p-3.5 rounded-xl bg-on-secondary-fixed-variant/40 border border-on-secondary-fixed-variant/40 space-y-2">
+<div class="flex items-center gap-2 text-label-sm font-bold text-emerald-400">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>All Systems Operational</span>
+</div>
+<p class="text-[11px] text-secondary-fixed-dim leading-snug">
+              Prototype Version 2.4. National Design Competition Edition.
+            </p>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright & Legal String (From Shared Components JSON) -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-label-sm font-label-sm text-secondary-fixed-dim">
+<p>© 2024 BloodLink National Healthcare Network. Every Drop Connects a Life. All clinical disclaimers apply.</p>
+<div class="flex items-center gap-4">
+<span class="text-primary-fixed">1-800-BLOOD-LINK</span>
+<span>•</span>
+<span>Confidential &amp; Volunteer Powered</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- CLIENT-SIDE INTERACTION SCRIPTS -->
+<script>
+    // 1. Blood Group Quick Selector Toggle
+    const groupButtons = document.querySelectorAll('#blood-group-selector .group-btn');
+    groupButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        groupButtons.forEach(b => {
+          b.className = 'group-btn py-2.5 px-2 text-center rounded-xl border border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container font-headline-sm font-bold transition-all';
+        });
+        btn.className = 'group-btn py-2.5 px-2 text-center rounded-xl border border-primary-container bg-primary-container text-on-primary font-headline-sm font-bold shadow-sm transition-all';
+      });
+    });
+
+    // 2. Demonstration Search Trigger
+    function triggerDemoSearch() {
+      const city = document.getElementById('city-input').value || 'Metro Area';
+      const activeGroupBtn = document.querySelector('#blood-group-selector .bg-primary-container');
+      const bloodGroup = activeGroupBtn ? activeGroupBtn.getAttribute('data-bg') : 'Selected Group';
+      alert(`Simulated Search Results:\nFound 6 verified donor clusters & 3 accredited blood banks for [${bloodGroup}] in ${city}.`);
+    }
+
+    // 3. Interactive Blood Group Compatibility Matrix Dataset
+    const compatibilityData = {
+      'O-': {
+        name: 'O Negative',
+        badge: 'Universal Red Cell Donor',
+        desc: 'O Negative red blood cells can be transfused to patients of all blood types in critical emergency situations when time does not permit antibody matching.',
+        give: ['O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'],
+        receive: ['O- Only'],
+        fact: 'Because only about 7% of the global population has O- blood, these reserves are in continuous emergency demand across all trauma units.'
+      },
+      'O+': {
+        name: 'O Positive',
+        badge: 'Most Common Blood Group',
+        desc: 'O Positive is the most widely present blood group in the global population, making it vital for ongoing hospital transfusions.',
+        give: ['O+', 'A+', 'B+', 'AB+'],
+        receive: ['O+', 'O-'],
+        fact: 'Roughly 38% of blood donors have O Positive blood, forming the backbone of general surgical supply.'
+      },
+      'A-': {
+        name: 'A Negative',
+        badge: 'Targeted Universal Platelet Donor',
+        desc: 'A Negative red blood cells can safely support individuals with A and AB groups, while plasma is widely compatible.',
+        give: ['A-', 'A+', 'AB-', 'AB+'],
+        receive: ['A-', 'O-'],
+        fact: 'A Negative donors are frequently invited to donate platelets (apheresis) to help oncology and leukemia patients.'
+      },
+      'A+': {
+        name: 'A Positive',
+        badge: 'High Hospital Volume Demand',
+        desc: 'One of the most frequently requested red cell types in clinical orthopedic and maternity emergency wings.',
+        give: ['A+', 'AB+'],
+        receive: ['A+', 'A-', 'O+', 'O-'],
+        fact: 'More than 30% of surgical blood transfusions utilize A Positive whole blood or red cell concentrates.'
+      },
+      'B-': {
+        name: 'B Negative',
+        badge: 'Rare Red Cell Type (<2% Population)',
+        desc: 'B Negative is extremely rare in western demographics, though slightly more common in South Asia.',
+        give: ['B-', 'B+', 'AB-', 'AB+'],
+        receive: ['B-', 'O-'],
+        fact: 'Less than 2 in every 100 people are B Negative. Emergency banks maintain strict automated donor alert triggers for this group.'
+      },
+      'B+': {
+        name: 'B Positive',
+        badge: 'Vital Regional Demand',
+        desc: 'Can donate red blood cells to B Positive and AB Positive patients, essential for sickle cell anemia protocols.',
+        give: ['B+', 'AB+'],
+        receive: ['B+', 'B-', 'O+', 'O-'],
+        fact: 'Donating B Positive blood frequently provides therapeutic relief for patients managing lifelong blood hemoglobin disorders.'
+      },
+      'AB-': {
+        name: 'AB Negative',
+        badge: 'Rarest Blood Group (<1%)',
+        desc: 'AB Negative represents less than 1% of the world population, making donor network speed quintessential.',
+        give: ['AB-', 'AB+'],
+        receive: ['AB-', 'A-', 'B-', 'O-'],
+        fact: 'AB Negative individuals can receive all negative red cell groups, but can only give red cells to AB types.'
+      },
+      'AB+': {
+        name: 'AB Positive',
+        badge: 'Universal Red Cell Recipient',
+        desc: 'AB Positive patients can safely receive red blood cells from any blood type. Furthermore, AB Positive plasma is universal.',
+        give: ['AB+ Only'],
+        receive: ['All Groups (A+, A-, B+, B-, AB+, AB-, O+, O-)'],
+        fact: 'While AB+ can receive all red blood cells, their plasma is the true golden universal plasma donor for burns and trauma.'
+      }
+    };
+
+    function selectMatrixGroup(groupKey) {
+      // Update Tab Styles
+      const buttons = document.querySelectorAll('#matrix-tabs .matrix-btn');
+      buttons.forEach(btn => {
+        if (btn.innerText.trim() === groupKey) {
+          btn.className = 'matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-primary-container bg-primary-container text-on-primary shadow-md';
+        } else {
+          btn.className = 'matrix-btn w-14 h-14 rounded-2xl font-headline-sm font-bold border-2 transition-all flex items-center justify-center border-surface-container-high bg-surface-container-lowest text-on-secondary-fixed hover:border-primary-container';
+        }
+      });
+
+      // Update Card Content
+      const data = compatibilityData[groupKey];
+      if (!data) return;
+
+      document.getElementById('mat-group-title').innerText = groupKey;
+      document.getElementById('mat-group-name').innerText = data.name;
+      document.getElementById('mat-group-badge').innerText = data.badge;
+      document.getElementById('mat-group-desc').innerText = data.desc;
+      document.getElementById('mat-factoid').innerText = data.fact;
+
+      // Render Give Pills
+      const giveContainer = document.getElementById('mat-can-give');
+      giveContainer.innerHTML = '';
+      data.give.forEach(grp => {
+        const pill = document.createElement('span');
+        pill.className = 'px-3.5 py-1.5 rounded-xl bg-tertiary-fixed text-primary font-bold text-label-md animate-fade-in';
+        pill.innerText = grp;
+        giveContainer.appendChild(pill);
+      });
+
+      // Render Receive Pills
+      const receiveContainer = document.getElementById('mat-can-receive');
+      receiveContainer.innerHTML = '';
+      data.receive.forEach(grp => {
+        const pill = document.createElement('span');
+        pill.className = 'px-3.5 py-1.5 rounded-xl bg-on-secondary-fixed text-surface-container-lowest font-bold text-label-md animate-fade-in';
+        pill.innerText = grp;
+        receiveContainer.appendChild(pill);
+      });
+    }
+  </script>
+</body></html>
